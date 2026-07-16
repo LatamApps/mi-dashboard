@@ -321,7 +321,20 @@ function setColor(v,c){
   document.documentElement.style.setProperty(v,c);
 }
 
+function logout(){
+  usuarioActual = "";
+  equipoActual = "";
+
+  login.classList.remove("hidden");
+  app.classList.add("hidden");
+  topButtons.classList.add("hidden");
+
+  codigo.value = "";
+  filtroFecha.value = "";
+}
+
 function render(){
+
   vistaPersonal.classList.toggle("hidden",vista!=="personal");
   vistaEquipo.classList.toggle("hidden",vista!=="equipo");
 
